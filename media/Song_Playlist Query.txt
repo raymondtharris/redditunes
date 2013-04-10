@@ -1,0 +1,22 @@
+Insert Into Song_Playlist(Song_Playlist_ID, Playlist_ID, Track_Number, Song_ID)
+Values( (Select Song_Playlist_ID
+		From Song_Playlist, Playlist,User
+		Where Song_Playlist.Playlist_ID= Playlist.Playlist_ID
+		And User.Username= $login_session),
+
+        (Select Song_Playlist.Playlist_ID
+        From Song_Playlist, Playlist,User
+        Where Song_Playlist.Playlist_ID= Playlist.Playlist_ID
+        And Playlist.Playlist_ID = User_ID
+        And User.Username= $login_session),
+
+        (Select Track_Number
+        From Song_Playlist
+        Where  Track_Number = (Select (MAX(Track_Number) +1)
+							   From Song_Playlist)),
+        (Select Song_ID
+        From Song_Playlist
+        Where  Song_ID= Song LIKE '%" . $_POST['value'] . ));
+     
+
+ /*song_playlist for user that is logged in,  playlist for the user whois logged in , query for the max track number and add 1, song_ID passed in from jquery $_POST   )*/

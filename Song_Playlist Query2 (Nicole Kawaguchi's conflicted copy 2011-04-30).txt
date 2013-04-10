@@ -1,0 +1,40 @@
+$user =$_POST['User'];
+
+
+$sqlplaylistid = "SELECT Playlist_ID
+		  From Playlist, User, Song_Playlist
+		  Where User.Username= "+.$_POST['User'].+"
+		  And User.User_ID = Playlist.User_ID
+		  And Playlist.Playlist_ID = Song_Playlist.Song_Playlist_ID";
+
+
+
+$sqltracknumber= "SELECT max(Song_Playlist.Track_Number)
+		  From User, Playlist, Song_Playlist
+		  Where  User.Username= "+.$_POST['User'].+"
+		  And User.User_ID = Playlist.User_ID
+		  And Playlist.Playlist_ID = Song_Playlist.Song_Playlist_ID";
+
+
+
+$querysongID="SELECT Song.Song_ID From Song Where Song.Name = "+'$_POST['aSong];
+
+
+$r= mysql_query($sqlplaylistid);
+
+$r2 = mysql_query($sqltracknumber);
+
+
+$r3 = mysql_query($querysongID);
+
+
+$sqlfinal="INSERT INTO Song_Playlist(Song_Playlist_ID, Playlist_ID, Track_Number, Song_ID) values("+ $r+ ", "+$r+" , "+$r2+" , "+$r3+" )";
+
+
+$rfinal = mysql_query($sqlfinal);
+
+
+
+
+
+ /*We want to insert into song_playlist: the song_playlist for user that is logged in,  playlist_ID for the user whois logged in , query for the max track number and add 1, song_ID passed in from jquery $_POST   )*/

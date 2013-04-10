@@ -1,0 +1,24 @@
+/media/music/black_eyed_peas/the_e.n.d./
+/media/music/bruno_mars/Doo-Wops_&_Hooligans/
+/media/music/common/universal_mind_control/
+/media/music/usher/raymond_v_raymond/
+/media/music/kanye_west/808s_and_Hearbreak/
+/media/music/periphery/periphery/
+/media/music/thomas_giles/pulse/
+/media/music/karnivool/
+/media/music/tesseract/concealing_fate/
+/media/music/just_like_vinyl/just_like_vinyl
+/media/music/the_fall_of_troy/
+/media/music/animals_as_leaders/
+/media/music/between_the_buried_and_me/
+/media/music/august_burns_red/
+
+Update File
+Set File_Loc = CONCAT("/media/music/the_fall_of_troy/doppelganger/", (File_ID-125),".m4a") , Type ="m4a", Name= File_ID-125
+Where File_ID >= 126
+and File_ID <= 136
+
+/*Update File
+Set File_ID = File_ID+1
+Where File_ID >=59
+and File_ID <74*/

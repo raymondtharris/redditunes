@@ -1,0 +1,13 @@
+/media/artistlogo/black_eyed_peas.jpg
+/media/artistlogo/bruno_mars.jpg
+/media/artistlogo/common.jpg
+/media/artistlogo/usher.jpg
+/media/artistlogo/kanye_west.jpg
+/media/artistlogo/periphery.jpg
+/media/artistlogo/karnivool.jpg
+/media/artistlogo/tesseract.jpg
+/media/artistlogo/just_like_vinyl.jpg
+/media/artistlogo/the_fall_of_troy.jpg
+/media/artistlogo/animals_as_leaders.jpg
+/media/artistlogo/between_the_buried_and_me.jpg
+/media/artistlogo/august_burns_red.jpg

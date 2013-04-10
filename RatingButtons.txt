@@ -1,0 +1,9 @@
+Update Rating
+Set Value= (Select Value 
+			From Rating)+1
+Where Song_ID = id from playlist
+
+Update Rating
+Set Value= (Select Value 
+			From Rating)-1
+Where Song_ID = id from playlist
